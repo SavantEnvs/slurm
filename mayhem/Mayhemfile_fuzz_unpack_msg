@@ -1,0 +1,9 @@
+project: savantenvs/slurm
+target: fuzz_unpack_msg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_unpack_msg/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_unpack_msg
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/slurm
+target: fuzz_serializer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_serializer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_serializer
+    libfuzzer: true
+    timeout: 10

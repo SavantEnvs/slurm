@@ -1,0 +1,9 @@
+project: savantenvs/slurm
+target: fuzz_bitstring
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bitstring/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bitstring
+    libfuzzer: true
+    timeout: 10
