@@ -1,0 +1,9 @@
+project: savantenvs/slurm
+target: fuzz_unpack_dbd
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_unpack_dbd/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_unpack_dbd
+    libfuzzer: true
+    timeout: 10
